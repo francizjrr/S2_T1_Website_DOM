@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aside y Grid de Cards con Bootstrap</title>
+    <!-- Incluyendo Bootstrap y estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/offers.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="roboto-regular">
+    <main class="container-fluid">
+      <h1 class="text-center my-3">Paquetes de Viajes</h1>
+      <div class="row">
+        <!-- Aside-->
+        <aside class="col-md-3 bg-secondary p-4">
+          <button
+            class="btn btn-primary position-relative my-3"
+            id="cart-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            <i class="bi bi-cart"></i> Carrito
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cart-count"
+            >
+              0
+            </span>
+          </button>
+          <h4>Filtros</h4>
+          <form>
+            <div class="mb-3">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select class="form-select" id="categoria">
+                <option selected>Todas</option>
+                <option value="1">Categoría 1</option>
+                <option value="2">Categoría 2</option>
+                <option value="3">Categoría 3</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Aplicar Filtros
+            </button>
+          </form>
+        </aside>
+
+        <!-- Grid de Cards -->
+        <section class="col-md-9">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <article class="col cartas">
+              <div class="card h-100">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Europe tour</h5>
+                  <p class="card-text">
+                    Disfruta de unas vacaciones familiares por toda europa,
+                    incluidos transporte, comida, y 300 euros de regalo
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$150</p>
+                  <p><b>Localidad: </b>Europa</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-success flex-grow-1"
+                    onclick="addToCart('Paquete 1', 'Tour a Europa')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                  <button class="btn btn-danger flex-grow-1">
+                    Más detalles
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="col cartas">
+              <div class="card h-100">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cancún Risort</h5>
+                  <p class="card-text">
+                    Disfruta con nosotros en las mejores vacaciones familiares
+                    en Cancún, una experiencia que sin duda no puedes dejar
+                    pasar.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$200</p>
+                  <p><b>Localidad: </b>Cancún, Mexico</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-success flex-grow-1"
+                    onclick="addToCart('Paquete Familiar', 'Cancún Risort')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                  <button class="btn btn-danger flex-grow-1">
+                    Más detalles
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 3</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 4-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 4</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 5-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 5</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 6-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 6</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 7-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 7</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 8-->
+
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 8</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 9-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 9</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 10-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 10</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 11-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 11</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!--card 12-->
+            <article class="col cartas">
+              <div class="card h-50">
+                <img
+                  src="../images/offers/agencia-de-viajes.jpg"
+                  class="card-img-top"
+                  alt="Imagen 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card 12</h5>
+                  <p class="card-text">
+                    Esta es la descripción de la tercera tarjeta.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--modal del carrito-->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row" id="cart-items">
+                <!-- Aquí se insertarán los artículos del carrito -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/offers.js"></script>
+  </body>
+</html>
