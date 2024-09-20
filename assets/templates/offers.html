@@ -17,107 +17,157 @@
       rel="stylesheet"
     />
   </head>
-  <body class="roboto-regular">
+  <body class="roboto-bold">
     <main class="container-fluid">
-      <h1 class="text-center my-5 ">Paquetes de Viajes</h1>
+      <h1 class="text-center my-5">Paquetes de Viajes</h1>
       <div class="row">
         <!-- Aside-->
-        <aside class="col-md-3 bg-secondary p-3">
+        <aside class="col-md-3 bg-warning p-3 tamaño">
           <button
-            class="btn btn-primary position-relative my-2"
+            class="btn btn-danger position-relative my-2"
             id="cart-icon"
             data-bs-toggle="modal"
             data-bs-target="#cartModal"
           >
             <i class="bi bi-cart"></i> Carrito
             <span
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
               id="cart-count"
+              style="color: white;"
             >
               0
             </span>
           </button>
           <h4 class="my-3">Filtros</h4>
-          <form>
+          <form id="filtro-form">
             <div class="mb-3">
               <label for="categoria" class="form-label">Categoría</label>
               <select class="form-select" id="categoria">
-                <option selected>Todas</option>
-                <option value="1">Categoría 1</option>
-                <option value="2">Categoría 2</option>
-                <option value="3">Categoría 3</option>
+                <option selected value="Todas">Todas</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Romantico">Romantico</option>
               </select>
             </div>
-        
-            <button type="submit" class="btn btn-primary w-100">
+
+            <button type="submit" class="btn btn-danger w-100">
               Aplicar Filtros
             </button>
           </form>
-          <hr>
+          <hr />
 
-          <h1 class="text-center my-3 bg-red">Ofertas especiales</h1>
-        
+          <h1 class="text-center my-3 bg-red">Ofertas Especiales</h1>
+
           <!-- Carrusel 1 -->
-          <div id="carousel1" class="carousel slide my-4" data-bs-ride="carousel">
+          <div
+            id="carousel1"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/turquia.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/punta.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/fuersa.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
             </div>
           </div>
-          <hr>
+          <hr />
 
-          <h1 class="text-center my-3 bg-red">Ofertas especiales</h1>
-        
+          <h1 class="text-center my-3 bg-red">Ofertas Navideñas</h1>
+
           <!-- Carrusel 2 -->
-          <div id="carousel2" class="carousel slide my-4" data-bs-ride="carousel">
+          <div
+            id="carousel2"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                
+                  src="../images/offers/navidad1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/navidad3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/navidad2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
             </div>
           </div>
-          <hr>
+          <hr />
 
-          <h1 class="text-center my-3 bg-red">Ofertas especiales</h1>
-        
+          <h1 class="text-center my-3 bg-red">Ofertas De San Valentin</h1>
+
           <!-- Carrusel 3 -->
-          <div id="carousel3" class="carousel slide my-4" data-bs-ride="carousel">
+          <div
+            id="carousel3"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/valentin.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/valentin2.jpg.crdownload"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src="../images/offers/agencia-de-viajes.jpg" class="d-block w-100" alt="...">
+                <img
+                  src="../images/offers/valentin3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
             </div>
           </div>
         </aside>
-        
 
         <!-- Grid de Cards -->
-        <section class="col-md-9">
+        <section class="col-md-9" id="cartas">
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Card 1 -->
-            <article class="col cartas">
+            <article class="col cartas" data-categoria="Familiar">
               <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/europe.jpg"
                   class="card-img-top"
                   alt="Imagen 1"
                 />
@@ -134,27 +184,26 @@
                 </div>
                 <div class="d-flex gap-2 p-3">
                   <button
-                    class="btn btn-success flex-grow-1"
+                    class="btn btn-warning flex-grow-1"
                     onclick="addToCart('Paquete Familiar', 'Tour a Europa')"
                   >
                     Añadir a favoritos
                   </button>
-                  <button class="btn btn-danger flex-grow-1">
-                    Más detalles
-                  </button>
+                  
                 </div>
               </div>
             </article>
             <!-- Card 2 -->
-            <article class="col cartas">
+            <article class="col cartas" data-categoria="Familiar">
               <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/cancun.jpg"
                   class="card-img-top"
                   alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Cancún Risort</h5>
+                  <h5 class="card-title">Cancún Resort</h5>
                   <p class="card-text">
                     Disfruta con nosotros en las mejores vacaciones familiares
                     en Cancún, una experiencia que sin duda no puedes dejar
@@ -167,178 +216,233 @@
                 </div>
                 <div class="d-flex gap-2 p-3">
                   <button
-                    class="btn btn-success flex-grow-1"
+                    class="btn btn-warning flex-grow-1"
                     onclick="addToCart('Paquete Familiar', 'Cancún Risort')"
                   >
                     Añadir a favoritos
                   </button>
-                  <button class="btn btn-danger flex-grow-1">
-                    Más detalles
-                  </button>
+                 
                 </div>
               </div>
             </article>
             <!-- Card 3 -->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Familiar">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/paris.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 3</h5>
+                  <h5 class="card-title">Paris Family</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Disfruta de unas vacaciones llenas de accion y diversión con
+                    nuestro paquete a paris, incluye los mejores restaurantes y
+                    actividades donde demostraras lo mejor de ti.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$300</p>
+                  <p><b>Localidad: </b>Francia, París</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Familiar', 'Paris Family')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
             <!--card 4-->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/disney.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 4</h5>
+                  <h5 class="card-title">Disneyland</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Visita a Mickey, Donald y todos los personajes de Disney en
+                    nuestro parque infantil, donde pasarás momentos
+                    inolvidables.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$100</p>
+                  <p><b>Localidad: </b>EE.UU, Disneyland</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Infantil', 'Disneyland')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
             <!--card 5-->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/universal.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 5</h5>
+                  <h5 class="card-title">Universal Orlando Resort</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Acompañanos en una aventura por el mundo de universal en
+                    orlando, con hotel todo pagado.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$400</p>
+                  <p><b>Localidad: </b>EE.UU, Florida</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Infantil', 'Universal Orlando resort')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
             <!--card 6-->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/fuersa.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 6</h5>
+                  <h5 class="card-title">Zoologico FURESA</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Disfruta con animales en el zoologico FURESA, donde podras
+                    ver todo tipo de animales y acariiar a unos animales bebés.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$25</p>
+                  <p><b>Localidad: </b>El salvador, La libertad</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Infantil', 'Zoologico FURESA')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
             <!--card 7-->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/paris_amor.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 7</h5>
+                  <h5 class="card-title">Paris Love</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Trae tu mejor ropa, y preparate para unas vacaciones en nuestro hotel de lujo, llenas de amor y dulcura en París.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$400</p>
+                  <p><b>Localidad: </b>Francia, París</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Romantico', 'París Love')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
             <!--card 8-->
 
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/crucero.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 8</h5>
+                  <h5 class="card-title">Crucero Panamá</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Prepara tus maletas, porque te espera un hermoso crucero de Panamá, con los mejores chefs para que tengas una hermosa cena romantica con tu pareja.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$2,250</p>
+                  <p><b>Localidad: </b>Panama</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Romantico', 'Crucero Panamá')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                  
                 </div>
               </div>
             </article>
             <!--card 9-->
-            <article class="col cartas">
-              <div class="card h-50">
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
                 <img
-                  src="../images/offers/agencia-de-viajes.jpg"
+                  style="height: 325px"
+                  src="../images/offers/roma.jpg"
                   class="card-img-top"
-                  alt="Imagen 3"
+                  alt="Imagen 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card 9</h5>
+                  <h5 class="card-title">Roma Sky</h5>
                   <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
+                    Un viaje inolvidable por toda roma, incluidos los mejores restaurantes y un hotel de lujo para que disfrutes una luna de miel inolvidable.
                   </p>
+                  <hr />
+                  <p><b>Precio: </b>$3,000</p>
+                  <p><b>Localidad: </b>Italia, Roma</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1"
+                    onclick="addToCart('Paquete Romantico', 'Roma Sky')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                 
                 </div>
               </div>
             </article>
-            <!--card 10-->
-            <article class="col cartas">
-              <div class="card h-50">
-                <img
-                  src="../images/offers/agencia-de-viajes.jpg"
-                  class="card-img-top"
-                  alt="Imagen 3"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Card 10</h5>
-                  <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
-                  </p>
-                </div>
-              </div>
-            </article>
-            <!--card 11-->
-            <article class="col cartas">
-              <div class="card h-50">
-                <img
-                  src="../images/offers/agencia-de-viajes.jpg"
-                  class="card-img-top"
-                  alt="Imagen 3"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Card 11</h5>
-                  <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
-                  </p>
-                </div>
-              </div>
-            </article>
-            <!--card 12-->
-            <article class="col cartas">
-              <div class="card h-50">
-                <img
-                  src="../images/offers/agencia-de-viajes.jpg"
-                  class="card-img-top"
-                  alt="Imagen 3"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Card 12</h5>
-                  <p class="card-text">
-                    Esta es la descripción de la tercera tarjeta.
-                  </p>
-                </div>
-              </div>
-            </article>
+           
           </div>
         </section>
       </div>

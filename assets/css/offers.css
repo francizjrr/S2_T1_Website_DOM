@@ -80,6 +80,15 @@
     
     
 }
+
+.carousel img {
+  height: 200px; /* Puedes ajustar la altura */
+  
+}
+.tamaño{
+  height: 1250px;
+}
+
   
 /* --- Container ---*/
 
