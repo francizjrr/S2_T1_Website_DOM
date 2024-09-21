@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aside y Grid de Cards con Bootstrap</title>
+    <!-- Incluyendo Bootstrap y estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/offers.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="roboto-bold">
+    <!-- header -->
+    <header class="header">
+      <!-- navbar -->
+      <div class="navbar-container container">
+        <nav class="navbar">
+          <a href="../../index.html">Inicio</a>
+          <a href="offers.html">Paquetes</a>
+          <a href="aboutUs.html">Acerca de</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container-fluid">
+      <h1 class="text-center my-5 bg-light">Paquetes de Viajes</h1>
+      <div class="row">
+        <!-- Aside-->
+        <aside class="col-md-3 p-3 tamaño">
+          <button
+            class="btn btn-danger colore position-relative my-2"
+            id="cart-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            <i class="bi bi-cart"></i> Carrito
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light"
+              id="cart-count"
+              style="color: black"
+            >
+              0
+            </span>
+          </button>
+          <h4 class="my-3">Filtros</h4>
+          <form id="filtro-form">
+            <div class="mb-3">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select class="form-select" id="categoria">
+                <option selected value="Todas">Todas</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Romantico">Romantico</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">
+              Aplicar Filtros
+            </button>
+          </form>
+          <hr />
+
+          <h1 class="text-center my-3 bg-red">Ofertas Especiales</h1>
+
+          <!-- Carrusel 1 -->
+          <div
+            id="carousel1"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../images/offers/turquia.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/punta.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/fuersa.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <h1 class="text-center my-3 bg-red">Ofertas Navideñas</h1>
+
+          <!-- Carrusel 2 -->
+          <div
+            id="carousel2"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../images/offers/navidad1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/navidad3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/navidad2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <h1 class="text-center my-3 bg-red">Ofertas De San Valentin</h1>
+
+          <!-- Carrusel 3 -->
+          <div
+            id="carousel3"
+            class="carousel slide my-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../images/offers/valentin.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/disney.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../images/offers/valentin3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Grid de Cards -->
+        <section class="col-md-9" id="cartas">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <article class="col cartas" data-categoria="Familiar">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/europe.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Europe tour</h5>
+                  <p class="card-text">
+                    Disfruta de unas vacaciones familiares por toda europa,
+                    incluidos transporte, comida, y 300 euros de regalo
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$150</p>
+                  <p><b>Localidad: </b>Europa</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Familiar', 'Tour a Europa')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="col cartas" data-categoria="Familiar">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/cancun.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cancún Resort</h5>
+                  <p class="card-text">
+                    Disfruta con nosotros en las mejores vacaciones familiares
+                    en Cancún, una experiencia que sin duda no puedes dejar
+                    pasar.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$200</p>
+                  <p><b>Localidad: </b>Cancún, Mexico</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Familiar', 'Cancún Risort')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="col cartas" data-categoria="Familiar">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/paris.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Paris Family</h5>
+                  <p class="card-text">
+                    Disfruta de unas vacaciones llenas de accion y diversión con
+                    nuestro paquete a paris, incluye los mejores restaurantes y
+                    actividades donde demostraras lo mejor de ti.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$300</p>
+                  <p><b>Localidad: </b>Francia, París</p>
+                  <p><b>Categoria: </b>Familiar</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Familiar', 'Paris Family')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 4-->
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/disney.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Disneyland</h5>
+                  <p class="card-text">
+                    Visita a Mickey, Donald y todos los personajes de Disney en
+                    nuestro parque infantil, donde pasarás momentos
+                    inolvidables.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$100</p>
+                  <p><b>Localidad: </b>EE.UU, Disneyland</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Infantil', 'Disneyland')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 5-->
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/universal.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Universal Orlando Resort</h5>
+                  <p class="card-text">
+                    Acompañanos en una aventura por el mundo de universal en
+                    orlando, con hotel todo pagado.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$400</p>
+                  <p><b>Localidad: </b>EE.UU, Florida</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Infantil', 'Universal Orlando resort')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 6-->
+            <article class="col cartas" data-categoria="Infantil">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/fuersa.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Zoologico FURESA</h5>
+                  <p class="card-text">
+                    Disfruta con animales en el zoologico FURESA, donde podras
+                    ver todo tipo de animales y acariiar a unos animales bebés.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$25</p>
+                  <p><b>Localidad: </b>El salvador, La libertad</p>
+                  <p><b>Categoria: </b>Infantil</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Infantil', 'Zoologico FURESA')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 7-->
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/paris_amor.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Paris Love</h5>
+                  <p class="card-text">
+                    Trae tu mejor ropa, y preparate para unas vacaciones en
+                    nuestro hotel de lujo, llenas de amor y dulcura en París.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$400</p>
+                  <p><b>Localidad: </b>Francia, París</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Romantico', 'París Love')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 8-->
+
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/crucero.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Crucero Panamá</h5>
+                  <p class="card-text">
+                    Prepara tus maletas, porque te espera un hermoso crucero de
+                    Panamá, con los mejores chefs para que tengas una hermosa
+                    cena romantica con tu pareja.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$2,250</p>
+                  <p><b>Localidad: </b>Panama</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Romantico', 'Crucero Panamá')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!--card 9-->
+            <article class="col cartas" data-categoria="Romantico">
+              <div class="card h-100">
+                <img
+                  style="height: 325px"
+                  src="../images/offers/roma.jpg"
+                  class="card-img-top"
+                  alt="Imagen 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Roma Sky</h5>
+                  <p class="card-text">
+                    Un viaje inolvidable por toda roma, incluidos los mejores
+                    restaurantes y un hotel de lujo para que disfrutes una luna
+                    de miel inolvidable.
+                  </p>
+                  <hr />
+                  <p><b>Precio: </b>$3,000</p>
+                  <p><b>Localidad: </b>Italia, Roma</p>
+                  <p><b>Categoria: </b>Romantico</p>
+                </div>
+                <div class="d-flex gap-2 p-3">
+                  <button
+                    class="btn btn-warning flex-grow-1 colore"
+                    onclick="addToCart('Paquete Romantico', 'Roma Sky')"
+                  >
+                    Añadir a favoritos
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--modal del carrito-->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row" id="cart-items">
+                <!-- Aquí se insertarán los artículos del carrito -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/offers.js"></script>
+  </body>
+  <!-- footer -->
+  <footer class="footer">
+    <!-- Column 1: Logo -->
+    <section class="footer-column footer-logo">
+      <img
+        src="https://static.wixstatic.com/media/7fe010_73d2c13248a644cc9512ad76445589a5~mv2.jpg/v1/crop/x_0,y_0,w_251,h_222/fill/w_169,h_149,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202024-08-08%20at%207_25_edited.jpg"
+        alt="Travelworld Logo"
+      />
+    </section>
+
+    <!-- Column 2: Travelworld -->
+    <section class="footer-column menu">
+      <h3>Viaja Facil</h3>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Paquetes</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </section>
+
+    <!-- Column 3: Contact -->
+    <section class="footer-column contact">
+      <div class="contact-info">
+        <h3>Contact</h3>
+
+        <p>Contáctanos para más información</p>
+        <p>📞 073 - 707 43 10</p>
+        <p>✉️ info@travelworld.nl</p>
+      </div>
+    </section>
+
+    <!-- Column 4: Redes sociales -->
+    <div class="footer-column social-icons">
+      <img
+        src="https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png"
+        alt="Facebook"
+      />
+      <img
+        src="https://static.wixstatic.com/media/11062b_681c6c82d3344ca09a024b18998e0f66~mv2.png/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_681c6c82d3344ca09a024b18998e0f66~mv2.png"
+        alt="Twitter"
+      />
+      <img
+        src="https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_45,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png"
+        alt="Instagram"
+      />
+    </div>
+  </footer>
+</html>
