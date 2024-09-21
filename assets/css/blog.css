@@ -41,9 +41,8 @@ body {
 /* Header */
 .header {
     text-align: center;
-    background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
     padding: 60px 0;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .header-logo-section img {
