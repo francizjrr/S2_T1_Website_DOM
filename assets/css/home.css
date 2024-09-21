@@ -1,0 +1,560 @@
+
+/* box model */
+html {
+   box-sizing: border-box;
+   font-family: "roboto", sans-serif;
+}
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+body {
+   margin: 0;
+}
+
+/* tipografia */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=SUSE&display=swap");
+
+/* --- Container ---*/
+
+.container {
+   width: 90vw;
+   margin: 0 auto;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+
+.header .navbar-container {
+   background-color: #364e3b;
+   height: 4rem;
+   margin-top: 1.4rem;
+}
+
+.header .navbar {
+   display: flex;
+   justify-content: flex-end;
+   width: 60vw;
+   max-height: 8vh;
+   background-color: #e8b86d;
+   border-top-right-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+   position: absolute;
+   left: 0;
+   top: 2.2rem;
+   align-items: center;
+}
+
+.header .navbar a {
+   text-decoration: none;
+   color: black;
+   display: block;
+   padding: 0.7rem 1.2rem;
+   font-size: 1em;
+   font-weight: bold;
+}
+
+.header .navbar a:hover {
+   background-color: #f6efe6;
+   color: #000;
+   border-radius: 0.8rem;
+}
+
+.header .header-logo-section {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 6rem;
+   padding: 4rem 0;
+}
+
+.header .header-logo-section img {
+   width: 93px;
+   height: 82px;
+   object-fit: cover;
+}
+
+.header .header-logo-section h1 {
+   font-size: 3em;
+}
+
+/* banner section */
+.banner-section {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://static.wixstatic.com/media/11062b_95b1a1a7879d441b82568b737c5f3c21~mv2.jpg/v1/fill/w_2321,h_1343,fp_0.50_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/11062b_95b1a1a7879d441b82568b737c5f3c21~mv2.jpg);
+   max-width: 100%;
+   height: 540px;
+   object-fit: cover;
+   background-position: 70% 70%;
+   text-align: center;
+   position: relative;
+}
+
+.banner-section .banner-text {
+   position: absolute;
+   width: 22rem;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.banner-section h2 {
+   font-size: 46px;
+   color: white;
+   margin: 0;
+}
+
+.banner-section p {
+   color: rgb(194, 192, 192);
+   font-size: 22px;
+   margin-bottom: 40px;
+}
+
+.banner-section .banner-text .btn-section {
+   padding: 1.5rem 1.8rem;
+   border-radius: 20px;
+   background-color: #f6efe6;
+   margin-top: 1rem;
+}
+
+.banner-section .banner-text a {
+   font-size: 1em;
+   font-weight: bold;
+   text-decoration: none;
+   color: #000;
+   transition: 0.5s;
+}
+
+.banner-section .banner-text a:hover {
+   background-color: #79de90;
+   color: #000;
+   transition: 0.5s;
+}
+
+.destinos-section {
+   margin-top: 3rem;
+}
+
+/* contenido principal */
+.main-container .destinos-section .destinos-section-head {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.destinos-section .cards-section {
+   display: flex;
+   justify-content: space-around;
+   gap: 40px;
+}
+
+.destinos-section .cards-section a {
+   text-decoration: none;
+   color: #000;
+}
+
+.destinos-section .cards-section .card {
+   flex: 1 1 300px;
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   text-align: center;
+   transition: transform 0.3s ease;
+   max-width: 26vw;
+   max-height: 96%;
+}
+
+.card .card-body {
+   padding: 2em 1em;
+}
+
+.card .card-body h4 {
+   font-size: 1.12em;
+}
+
+/* Efecto de movimiento */
+.destinos-section .cards-section .card:hover {
+   transform: translateY(-10px);
+}
+
+.destinos-section .cards-section .card img {
+   width: 100%;
+   height: 220px;
+}
+
+/* seccion Paquetes destacados */
+
+.paquetes-destacados {
+   text-align: center;
+   margin: 5rem 0;
+}
+
+.paquetes-destacados h2 {
+   font-size: 1.5em;
+   margin-bottom: 20px;
+}
+
+.paquetes-destacados p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 2.5rem;
+}
+
+.paquetes-destacados .paquetes-grid {
+   display: flex;
+   gap: 40px;
+   justify-content: space-between;
+}
+
+.paquetes-destacados .paquetes-grid a {
+   text-decoration: none;
+   color: black;
+}
+
+.paquetes-destacados .paquetes-grid .paquete {
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   transition: transform 0.3s ease;
+   max-height: 93%;
+   width: 25vw;
+}
+
+/* efecto de movimiento */
+.paquetes-destacados .paquetes-grid .paquete:hover {
+   transform: translateY(-10px);
+}
+
+.paquetes-destacados .paquetes-grid .paquete img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+
+.paquetes-destacados .paquetes-grid .paquete .paquete-body {
+   padding: 2rem;
+}
+
+.paquetes-destacados .paquetes-grid .paquete .paquete-body p {
+   font-size: 1.2rem;
+   color: #364e3b;
+   margin-bottom: 15px;
+}
+
+.paquetes-destacados .paquetes-grid .paquete .paquete-body p:hover {
+   text-decoration: underline #79de90;
+}
+
+/* Seccion Sobre nosotros */
+
+.about-section {
+   text-align: center;
+   background-color: #79de90;
+   padding: 2rem 0;
+   margin-bottom: 5rem;
+}
+
+.about-section h2 {
+   font-size: 2em;
+}
+
+.about-section #about-btn {
+   cursor: pointer;
+   padding: 20px;
+   border-radius: 10px;
+   transition: 0.3s;
+}
+
+.about-section #about-btn:hover {
+   background-color: black;
+   color: white;
+   transition: 0.3s;
+}
+
+.about-section #about-texto-section {
+   display: none;
+}
+
+.about-section #about-texto-section .about-texto h4 {
+   font-size: 1.3em;
+   text-align: center;
+}
+
+.about-section #about-texto-section .about-texto {
+   width: 50vw;
+   line-height: 1.5rem;
+   margin: 0 auto;
+   text-align: justify;
+}
+
+/* Seccion reservar paquete */
+
+.reserva-section {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: 497px;
+}
+.reserva-section .reserva-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #1e2f22;
+   color: white;
+   padding: 2rem;
+}
+.reserva-section .reserva-info p {
+   line-height: 2px;
+}
+
+.reserva-section .reserva-info .social-icons {
+   margin-top: 2rem;
+}
+
+.reserva-section .reserva-info .social-icons img {
+   width: 25px;
+   height: 25px;
+}
+.reserva-section .reserva-form-section {
+   padding: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #364e3b;
+}
+
+#form {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 20px;
+   row-gap: 10px;
+   width: 100%;
+}
+
+#form .form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(5) {
+   grid-column: 1 / 3;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 10px;
+   font-size: 0.9em;
+   color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+.form-group input:hover,
+.form-group textarea {
+   border: 1px solid black;
+}
+
+/* Footer */
+
+.footer {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   height: 367px;
+   align-items: center;
+   gap: 10px;
+   text-align: center;
+}
+
+.footer .footer-logo img {
+   width: 93px;
+   height: 82px;
+}
+
+.footer .footer-column h3 {
+   text-align: start;
+   color: #364e3b;
+}
+
+.footer-column .contact-info {
+   text-align: start;
+}
+
+.footer .footer-column ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer .footer-column ul li {
+   text-align: start;
+   margin-bottom: 10px;
+}
+
+.footer .footer-column ul li a {
+   text-decoration: none;
+   color: black;
+}
+.footer .footer-column ul li a:hover {
+   color: #79de90;
+}
+
+/* Media Queries */
+
+@media (max-width: 769px) {
+   /* header */
+   .header .navbar {
+      width: 70vw;
+   }
+
+   /* footer */
+   .footer .social-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 40%;
+   }
+   .footer .social-icons img {
+      width: 25px;
+      height: 25px;
+   }
+}
+
+@media (max-width: 600px) {
+   .header .navbar {
+      width: 80vw;
+   }
+
+   .header .header-logo-section h1 {
+      font-size: 2em;
+   }
+
+   /* banner imagen */
+   .banner-section {
+      background-position: 59% 66%;
+   }
+
+   /* main cards */
+   .main-container .destinos-section .destinos-section-head {
+      width: 83%;
+      margin: 0 auto;
+   }
+
+   .destinos-section .cards-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem 0;
+   }
+
+   .paquetes-destacados p {
+      width: 83%;
+      margin: 0 auto;
+   }
+
+   .destinos-section .cards-section .card {
+      max-width: 77vw;
+      margin-bottom: 2rem;
+   }
+
+   /* cards paquetes destacados */
+
+   .paquetes-destacados .paquetes-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem 0;
+   }
+   .paquetes-destacados .paquetes-grid .paquete {
+      width: 75vw;
+      margin-bottom: 2rem;
+   }
+
+   /* sobre nosotros  */
+
+   .about-section #about-texto-section .about-texto {
+      width: 64vw;
+   }
+
+   /* reserva formulario */
+   .reserva-section {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .reserva-section .reserva-info {
+      align-items: center;
+   }
+
+   #form {
+      display: flex;
+      flex-direction: column;
+   }
+
+   /* footer */
+   .footer {
+      grid-template-columns: 1fr 1fr;
+   }
+   .footer-column {
+      margin: 0 auto;
+   }
+
+   .footer .footer-column .contact-info {
+      font-size: 0.8em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      text-align: center;
+   }
+
+   .footer .footer-column .contact-info h3 {
+      text-align: center;
+   }
+
+   .footer .social-icons {
+      display: flex;
+      justify-content: space-evenly;
+      height: 70%;
+   }
+}
+
+@media (max-width: 500px) {
+   .header .navbar-container {
+      height: 200px;
+      position: relative;
+      width: 100%;
+   }
+
+   .header .navbar {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      max-height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #364e3b;
+   }
+
+   .header .navbar a{
+      color: #fff;
+   }
+
+   .header .header-logo-section{
+      flex-direction: column;
+      height: 20rem;
+   }
+}
